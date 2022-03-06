@@ -284,11 +284,10 @@
               class="callout-wrapper inner-padding-medium"
             >
               <h2 class="heading-large text-white margin-bottom-xsmall">
-                get tickets.
+                {{ participateMethod }}
               </h2>
               <p class="medium-paragraph margin-bottom-small">
-                Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor
-                auctor.
+                {{ participateDetails }}
               </p>
               <div
                 data-w-id="f22dbb03-ea9e-a94b-045a-7963939b43b2"
@@ -309,7 +308,7 @@
                       />
                     </div>
                     <div class="label-button" style="color: rgb(255, 255, 255)">
-                      Get Started
+                      {{ paricipateBtnText }}
                     </div>
                   </div>
                   <div
@@ -332,8 +331,21 @@
   </div>
 </template>
 
-<script>
-export default {};
+<script setup>
+const props = defineProps({
+  participateMethod: {
+    type: String,
+    required: true,
+  },
+  participateDetails: {
+    type: String,
+    required: true,
+  },
+  paricipateBtnText: {
+    type: String,
+    required: true,
+  },
+});
 </script>
 
 <style></style>

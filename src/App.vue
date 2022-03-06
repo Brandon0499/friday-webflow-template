@@ -23,9 +23,16 @@
       :statistics="about.statistics"
       :sponsors="about.sponsors"
     ></AboutSection>
-    <MarketingSection></MarketingSection>
-    <CompanyInfoSection></CompanyInfoSection>
-    <ParticipateSection></ParticipateSection>
+    <MarketingSection
+      :reasons="marketing.reasons"
+      :whyUsText="marketing.whyUsText"
+    ></MarketingSection>
+    <CompanyInfoSection :members="companyInfo.members"></CompanyInfoSection>
+    <ParticipateSection
+      :participateMethod="participate.participateMethod"
+      :participateDetails="participate.participateDetails"
+      :paricipateBtnText="participate.paricipateBtnText"
+    ></ParticipateSection>
     <Footer
       :companyLogo="footer.companyLogo"
       :companyDescription="footer.companyDescription"
@@ -100,6 +107,64 @@ const about = ref({
         "/assets/61e5bb75ba3a7e76a20bd4e5_Combined Shape Copy 27.svg",
     },
   ],
+});
+
+// Marketing data
+const marketing = ref({
+  whyUsText: "Why Attend Friday festival?",
+  reasons: [
+    {
+      reasonTitle: "Raise your skillset to the next level.",
+      reasonParagraph:
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique.1",
+    },
+    {
+      reasonTitle: "Extend your industry connections.",
+      reasonParagraph:
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique.2",
+    },
+    {
+      reasonTitle: "Interact live with world-class experts.",
+      reasonParagraph:
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique.3",
+    },
+  ],
+});
+
+// CompanyInformation data
+// Company members data
+const companyInfo = ref({
+  members: [
+    {
+      memberName: "James Hetfield",
+      memberProfileLink:
+        "https://friday-template.webflow.io/speakers/james-hetfield",
+      memberImageURL:
+        "/assets/61fdc09d23a662eecb14d82a_portrait-happy-smiley-man.jpg",
+    },
+    {
+      memberName: "Ada Lovelace",
+      memberProfileLink:
+        "https://friday-template.webflow.io/speakers/ada-lovelace",
+      memberImageURL:
+        "https://assets.website-files.com/61e5bb75ba3a7e1b1d0bd3e5/61fdc0a871a096ee4ef00abd_portrait-good-.jpg",
+    },
+    {
+      memberName: "Tiffany Tattum",
+      memberProfileLink:
+        "https://friday-template.webflow.io/speakers/tiffany-tattum",
+      memberImageURL:
+        "https://assets.website-files.com/61e5bb75ba3a7e1b1d0bd3e5/61fdc767a1b84ad984911b54_pretty-smiling-joyfully-female-with-fair-hair-dressed-casually-looking-with-satisfaction.jpg",
+    },
+  ],
+});
+
+// Participate data
+const participate = ref({
+  participateMethod: "get tickets",
+  participateDetails:
+    "Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.",
+  paricipateBtnText: "Get Started",
 });
 
 // Footer data
