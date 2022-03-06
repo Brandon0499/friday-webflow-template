@@ -27,7 +27,13 @@
       :reasons="marketing.reasons"
       :whyUsText="marketing.whyUsText"
     ></MarketingSection>
-    <CompanyInfoSection :members="companyInfo.members"></CompanyInfoSection>
+    <CompanyInfoSection
+      :members="companyInfo.members"
+      :memberTextAs="companyInfo.memberTextAs"
+      :membersIntro="companyInfo.membersIntro"
+      :agendaTextAs="companyInfo.agendaTextAs"
+      :agendaIntro="companyInfo.agendaIntro"
+    ></CompanyInfoSection>
     <ParticipateSection
       :participateMethod="participate.participateMethod"
       :participateDetails="participate.participateDetails"
@@ -132,8 +138,9 @@ const marketing = ref({
 });
 
 // CompanyInformation data
-// Company members data
 const companyInfo = ref({
+  memberTextAs: "Members",
+  membersIntro: "Stay tuned for more annocemeents in the coming months",
   members: [
     {
       memberName: "James Hetfield",
@@ -157,6 +164,9 @@ const companyInfo = ref({
         "https://assets.website-files.com/61e5bb75ba3a7e1b1d0bd3e5/61fdc767a1b84ad984911b54_pretty-smiling-joyfully-female-with-fair-hair-dressed-casually-looking-with-satisfaction.jpg",
     },
   ],
+  agendaTextAs: "Agenda",
+  agendaIntro:
+    "A stellar roster of design and product leaders to share their journeys and experiences with the community.",
 });
 
 // Participate data

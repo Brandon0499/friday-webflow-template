@@ -1,12 +1,20 @@
 <template>
   <div class="container padding-bottom-medium">
-    <SubInfoHeader>
-      <template #companySubInfoTitle>Speakerssss</template>
-      <template #companySubInfoParagraph
-        >Stay tuned for more speaker announcements in the coming
-        months.</template
-      >
-    </SubInfoHeader>
+    <div class="container">
+      <div class="w-layout-grid main-grid">
+        <div
+          id="w-node-_6e7598f0-4ae8-b765-38bc-ef4f35557c1a-0e305478"
+          class="center-wrapper inner-padding-medium"
+        >
+          <h2 class="heading-large margin-bottom-xsmall">
+            {{ memberTextAs }}
+          </h2>
+          <p class="medium-paragraph">
+            {{ membersIntro }}
+          </p>
+        </div>
+      </div>
+    </div>
     <div class="w-dyn-list">
       <div role="list" class="collection-list-col w-dyn-items">
         <div
@@ -342,9 +350,13 @@
 </template>
 
 <script setup>
-import SubInfoHeader from "./SubInfoHeader.vue";
-
 const props = defineProps({
+  memberTextAs: {
+    type: String,
+  },
+  membersIntro: {
+    type: String,
+  },
   members: {
     type: Array,
   },
