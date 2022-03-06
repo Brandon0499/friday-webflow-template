@@ -7,12 +7,10 @@
           class="callout-wrapper padding-bottom-small"
         >
           <h1 class="heading-xlarge text-yellow margin-bottom-small">
-            Together Towards Tomorrow
+            {{ companySlogan }}
           </h1>
           <p class="main-paragraph size-large text-white-opacity">
-            Friday Festival is the community driven conference for design team
-            leads, UX/UI designer, Creatives, and Art Directors looking to
-            improve themselves and their teams.
+            {{ companySummary }}
           </p>
           <div class="flex">
             <div
@@ -71,36 +69,28 @@
             </div>
           </div>
         </div>
+
         <div
           id="w-node-_6341ee7c-c590-47e8-d3cc-5c75418cc276-0e305478"
           class="callout-wrapper"
         >
-          <h2 class="heading-small">About Friday Festival</h2>
+          <h2 class="heading-small">About {{ companyFullName }}</h2>
         </div>
+      </div>
+      <div class="statisticsWrapper">
         <div
-          id="w-node-_81188912-1a14-4c5a-bc90-bdd228b6ae42-0e305478"
-          class="callout-box-wrapper"
+          class="callout-box-wrapper statisticsSpace"
+          v-for="statistic in statistics"
+          :key="statistic.statisticFor"
         >
-          <div class="value large text-yellow">25+</div>
-          <h2 class="heading-small">Innovators speakers</h2>
-        </div>
-        <div
-          id="w-node-f7d7c5ec-455e-8ae7-b61e-26ef975f4ca9-0e305478"
-          class="callout-box-wrapper"
-        >
-          <div class="value large text-yellow">32</div>
-          <h2 class="heading-small">International sponsors</h2>
-        </div>
-        <div
-          id="w-node-b0816f0d-a2b5-4786-b910-6eec436879a1-0e305478"
-          class="callout-box-wrapper"
-        >
-          <div class="value large text-yellow">18</div>
-          <h2 class="heading-small">Creative Workshops</h2>
+          <div class="value large text-yellow">
+            {{ statistic.statisticNumbers }}
+          </div>
+          <h2 class="heading-small">{{ statistic.statisticFor }}</h2>
         </div>
       </div>
     </div>
-    <div class="flex-scrolling">
+    <div class="flex-scrolling" style="margin-top: 40px">
       <div
         class="w-layout-grid logo-grid-ticker"
         style="
@@ -111,59 +101,12 @@
         "
       >
         <div
-          data-w-id="27272752-928c-a3c8-b181-a7735b8a7f8b"
           class="logo-wrap-ticker"
+          v-for="sponsor in sponsors"
+          :key="sponsor.sponsorImageURL"
         >
           <img
-            src="/assets/61e5bb75ba3a7e67f00bd4e6_Combined Shape Copy 31.svg"
-            loading="lazy"
-            alt=""
-            class="company-logo"
-          />
-        </div>
-        <div class="logo-wrap-ticker">
-          <img
-            src="/assets/61e5bb75ba3a7e86360bd4eb_LOGO-001-GRAY Copy.svg"
-            loading="lazy"
-            alt=""
-            class="company-logo"
-          />
-        </div>
-        <div class="logo-wrap-ticker">
-          <img
-            src="/assets/61e5bb75ba3a7e474f0bd4ea_Combined Shape Copy 30.svg"
-            loading="lazy"
-            alt=""
-            class="company-logo"
-          />
-        </div>
-        <div class="logo-wrap-ticker">
-          <img
-            src="/assets/61e5bb75ba3a7e3e010bd4e9_Combined Shape Copy 29.svg"
-            loading="lazy"
-            alt=""
-            class="company-logo"
-          />
-        </div>
-        <div class="logo-wrap-ticker">
-          <img
-            src="/assets/61e5bb75ba3a7ea1400bd4e8_Combined Shape Copy 32.svg"
-            loading="lazy"
-            alt=""
-            class="company-logo"
-          />
-        </div>
-        <div class="logo-wrap-ticker">
-          <img
-            src="/assets/61e5bb75ba3a7ebc9e0bd4e7_Combined Shape Copy 28.svg"
-            loading="lazy"
-            alt=""
-            class="company-logo"
-          />
-        </div>
-        <div class="logo-wrap-ticker">
-          <img
-            src="/assets/61e5bb75ba3a7e76a20bd4e5_Combined Shape Copy 27.svg"
+            :src="sponsor.sponsorImageURL"
             loading="lazy"
             alt=""
             class="company-logo"
@@ -180,59 +123,12 @@
         "
       >
         <div
-          data-w-id="27272752-928c-a3c8-b181-a7735b8a7f9a"
           class="logo-wrap-ticker"
+          v-for="sponsor in sponsors"
+          :key="sponsor.sponsorImageURL"
         >
           <img
-            src="/assets/61e5bb75ba3a7e67f00bd4e6_Combined Shape Copy 31.svg"
-            loading="lazy"
-            alt=""
-            class="company-logo"
-          />
-        </div>
-        <div class="logo-wrap-ticker">
-          <img
-            src="/assets/61e5bb75ba3a7e86360bd4eb_LOGO-001-GRAY Copy.svg"
-            loading="lazy"
-            alt=""
-            class="company-logo"
-          />
-        </div>
-        <div class="logo-wrap-ticker">
-          <img
-            src="/assets/61e5bb75ba3a7e474f0bd4ea_Combined Shape Copy 30.svg"
-            loading="lazy"
-            alt=""
-            class="company-logo"
-          />
-        </div>
-        <div class="logo-wrap-ticker">
-          <img
-            src="/assets/61e5bb75ba3a7e3e010bd4e9_Combined Shape Copy 29.svg"
-            loading="lazy"
-            alt=""
-            class="company-logo"
-          />
-        </div>
-        <div class="logo-wrap-ticker">
-          <img
-            src="/assets/61e5bb75ba3a7ea1400bd4e8_Combined Shape Copy 32.svg"
-            loading="lazy"
-            alt=""
-            class="company-logo"
-          />
-        </div>
-        <div class="logo-wrap-ticker">
-          <img
-            src="/assets/61e5bb75ba3a7ebc9e0bd4e7_Combined Shape Copy 28.svg"
-            loading="lazy"
-            alt=""
-            class="company-logo"
-          />
-        </div>
-        <div class="logo-wrap-ticker">
-          <img
-            src="/assets/61e5bb75ba3a7e76a20bd4e5_Combined Shape Copy 27.svg"
+            :src="sponsor.sponsorImageURL"
             loading="lazy"
             alt=""
             class="company-logo"
@@ -249,59 +145,12 @@
         "
       >
         <div
-          data-w-id="27272752-928c-a3c8-b181-a7735b8a7fa9"
+          v-for="sponsor in sponsors"
+          :key="sponsor.sponsorImageURL"
           class="logo-wrap-ticker"
         >
           <img
-            src="/assets/61e5bb75ba3a7e67f00bd4e6_Combined Shape Copy 31.svg"
-            loading="lazy"
-            alt=""
-            class="company-logo"
-          />
-        </div>
-        <div class="logo-wrap-ticker">
-          <img
-            src="/assets/61e5bb75ba3a7e86360bd4eb_LOGO-001-GRAY Copy.svg"
-            loading="lazy"
-            alt=""
-            class="company-logo"
-          />
-        </div>
-        <div class="logo-wrap-ticker">
-          <img
-            src="/assets/61e5bb75ba3a7e474f0bd4ea_Combined Shape Copy 30.svg"
-            loading="lazy"
-            alt=""
-            class="company-logo"
-          />
-        </div>
-        <div class="logo-wrap-ticker">
-          <img
-            src="/assets/61e5bb75ba3a7e3e010bd4e9_Combined Shape Copy 29.svg"
-            loading="lazy"
-            alt=""
-            class="company-logo"
-          />
-        </div>
-        <div class="logo-wrap-ticker">
-          <img
-            src="/assets/61e5bb75ba3a7ea1400bd4e8_Combined Shape Copy 32.svg"
-            loading="lazy"
-            alt=""
-            class="company-logo"
-          />
-        </div>
-        <div class="logo-wrap-ticker">
-          <img
-            src="/assets/61e5bb75ba3a7ebc9e0bd4e7_Combined Shape Copy 28.svg"
-            loading="lazy"
-            alt=""
-            class="company-logo"
-          />
-        </div>
-        <div class="logo-wrap-ticker">
-          <img
-            src="/assets/61e5bb75ba3a7e76a20bd4e5_Combined Shape Copy 27.svg"
+            :key="sponsor.sponsorImageURL"
             loading="lazy"
             alt=""
             class="company-logo"
@@ -312,8 +161,38 @@
   </div>
 </template>
 
-<script>
-export default {};
+<script setup>
+const props = defineProps({
+  companyFullName: {
+    type: String,
+    required: true,
+  },
+  companySlogan: {
+    type: String,
+    required: true,
+  },
+  companySummary: {
+    type: String,
+    required: true,
+  },
+  statistics: {
+    type: Array,
+    required: true,
+  },
+  sponsors: {
+    type: Array,
+    required: true,
+  },
+});
 </script>
 
-<style></style>
+<style scoped>
+.statisticsSpace {
+  margin-bottom: 40px;
+}
+@media (min-width: 990px) {
+  .statisticsWrapper {
+    margin-left: 35%;
+  }
+}
+</style>
