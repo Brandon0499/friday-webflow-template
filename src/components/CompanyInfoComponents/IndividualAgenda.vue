@@ -1,7 +1,7 @@
 <template>
   <div
     class="rounded-box"
-    v-for="singleAgenda in singleAgendas"
+    v-for="singleAgenda in agendas.singleAgendas"
     :key="singleAgenda.day"
   >
     <div class="w-layout-grid main-grid">
@@ -80,8 +80,9 @@
 
 <script setup>
 const props = defineProps({
-  singleAgendas: {
-    type: Array,
+  agendas: {
+    type: Object,
+    required: true,
   },
 });
 </script>

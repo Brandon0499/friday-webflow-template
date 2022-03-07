@@ -16,40 +16,11 @@
   <div class="full-page">
     <Navbar></Navbar>
     <MainTitleSection></MainTitleSection>
-    <AboutSection
-      :companyFullName="about.companyFullName"
-      :companySlogan="about.companySlogan"
-      :companySummary="about.companySummary"
-      :statistics="about.statistics"
-      :sponsors="about.sponsors"
-    ></AboutSection>
-    <MarketingSection
-      :reasons="marketing.reasons"
-      :whyUsText="marketing.whyUsText"
-    ></MarketingSection>
-    <CompanyInfoSection
-      :members="companyInfo.members"
-      :memberTextAs="companyInfo.memberTextAs"
-      :membersIntro="companyInfo.membersIntro"
-      :agendaTextAs="companyInfo.agendaTextAs"
-      :agendaIntro="companyInfo.agendaIntro"
-    ></CompanyInfoSection>
-    <ParticipateSection
-      :participateMethod="participate.participateMethod"
-      :participateDetails="participate.participateDetails"
-      :paricipateBtnText="participate.paricipateBtnText"
-    ></ParticipateSection>
-    <Footer
-      :companyLogo="footer.companyLogo"
-      :companyDescription="footer.companyDescription"
-      :footerLists="footer.footerLists"
-      :socialMediaLinks="footer.socialMediaLinks"
-      :companyName="footer.companyName"
-      :creatorCompany="footer.creatorCompany"
-      :creatorCompanyWebsite="footer.creatorCompanyWebsite"
-      :creatorName="footer.creatorName"
-      :creatorLink="footer.creatorLink"
-    ></Footer>
+    <AboutSection :about="about"></AboutSection>
+    <MarketingSection :marketing="marketing"></MarketingSection>
+    <CompanyInfoSection :companyInfo="companyInfo"></CompanyInfoSection>
+    <ParticipateSection :participate="participate"></ParticipateSection>
+    <Footer :footer="footer"></Footer>
   </div>
 </template>
 

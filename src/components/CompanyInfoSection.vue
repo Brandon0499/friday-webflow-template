@@ -258,16 +258,9 @@
       </div>
       <WavesSeparator></WavesSeparator>
     </div>
-    <CompanyMembers
-      :members="members"
-      :membersIntro="membersIntro"
-      :memberTextAs="memberTextAs"
-    ></CompanyMembers>
+    <CompanyMembers :companyInfo="companyInfo"></CompanyMembers>
     <WavesSeparator></WavesSeparator>
-    <CompanyAgenda
-      :agendaTextAs="agendaTextAs"
-      :agendaIntro="agendaIntro"
-    ></CompanyAgenda>
+    <CompanyAgenda :companyInfo="companyInfo"></CompanyAgenda>
   </div>
 </template>
 
@@ -277,20 +270,9 @@ import WavesSeparator from "./WavesSeparator.vue";
 import CompanyAgenda from "./CompanyInfoComponents/CompanyAgenda.vue";
 
 const props = defineProps({
-  memberTextAs: {
-    type: String,
-  },
-  membersIntro: {
-    type: String,
-  },
-  members: {
-    type: Array,
-  },
-  agendaTextAs: {
-    type: String,
-  },
-  agendaIntro: {
-    type: String,
+  companyInfo: {
+    type: Object,
+    required: true,
   },
 });
 </script>

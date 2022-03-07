@@ -6,13 +6,15 @@
         id="w-node-_1783bf35-b007-14db-9815-20711d5e0fab-0e305478"
         class="center-wrapper inner-padding-medium"
       >
-        <h2 class="heading-large margin-bottom-xsmall">{{ agendaTextAs }}</h2>
+        <h2 class="heading-large margin-bottom-xsmall">
+          {{ companyInfo.agendaTextAs }}
+        </h2>
         <p class="medium-paragraph">
-          {{ agendaIntro }}
+          {{ companyInfo.agendaIntro }}
         </p>
       </div>
     </div>
-    <IndividualAgenda :singleAgendas="agendas.singleAgendas"></IndividualAgenda>
+    <IndividualAgenda :agendas="agendas"></IndividualAgenda>
   </div>
 </template>
 
@@ -82,11 +84,9 @@ const agendas = ref({
 });
 
 const props = defineProps({
-  agendaTextAs: {
-    type: String,
-  },
-  agendaIntro: {
-    type: String,
+  companyInfo: {
+    type: Object,
+    required: true,
   },
 });
 </script>

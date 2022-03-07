@@ -284,10 +284,10 @@
               class="callout-wrapper inner-padding-medium"
             >
               <h2 class="heading-large text-white margin-bottom-xsmall">
-                {{ participateMethod }}
+                {{ participate.participateMethod }}
               </h2>
               <p class="medium-paragraph margin-bottom-small">
-                {{ participateDetails }}
+                {{ participate.participateDetails }}
               </p>
               <div
                 data-w-id="f22dbb03-ea9e-a94b-045a-7963939b43b2"
@@ -308,7 +308,7 @@
                       />
                     </div>
                     <div class="label-button" style="color: rgb(255, 255, 255)">
-                      {{ paricipateBtnText }}
+                      {{ participate.paricipateBtnText }}
                     </div>
                   </div>
                   <div
@@ -333,16 +333,8 @@
 
 <script setup>
 const props = defineProps({
-  participateMethod: {
-    type: String,
-    required: true,
-  },
-  participateDetails: {
-    type: String,
-    required: true,
-  },
-  paricipateBtnText: {
-    type: String,
+  participate: {
+    type: Object,
     required: true,
   },
 });

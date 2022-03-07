@@ -8,7 +8,7 @@
             class="heading-xlarge-hero"
             style=""
           >
-            {{ whyUsText }}
+            {{ marketing.whyUsText }}
           </h1>
         </div>
       </div>
@@ -33,7 +33,7 @@
           <div id="w-node-_28280f35-779c-5cf2-008c-0516b6395e27-0e305478">
             <div
               class="content-wrapper padding-bottom-medium"
-              v-for="reason in reasons"
+              v-for="reason in marketing.reasons"
               :key="reason.reasonTitle"
             >
               <div
@@ -111,12 +111,8 @@
 
 <script setup>
 const prop = defineProps({
-  whyUsText: {
-    type: String,
-    required: true,
-  },
-  reasons: {
-    type: Array,
+  marketing: {
+    type: Object,
     required: true,
   },
 });

@@ -7,10 +7,10 @@
           class="callout-wrapper padding-bottom-small"
         >
           <h1 class="heading-xlarge text-yellow margin-bottom-small">
-            {{ companySlogan }}
+            {{ about.companySlogan }}
           </h1>
           <p class="main-paragraph size-large text-white-opacity">
-            {{ companySummary }}
+            {{ about.companySummary }}
           </p>
           <div class="flex">
             <div
@@ -74,13 +74,13 @@
           id="w-node-_6341ee7c-c590-47e8-d3cc-5c75418cc276-0e305478"
           class="callout-wrapper"
         >
-          <h2 class="heading-small">About {{ companyFullName }}</h2>
+          <h2 class="heading-small">About {{ about.companyFullName }}</h2>
         </div>
       </div>
       <div class="statisticsWrapper">
         <div
           class="callout-box-wrapper statisticsSpace"
-          v-for="statistic in statistics"
+          v-for="statistic in about.statistics"
           :key="statistic.statisticFor"
         >
           <div class="value large text-yellow">
@@ -102,7 +102,7 @@
       >
         <div
           class="logo-wrap-ticker"
-          v-for="sponsor in sponsors"
+          v-for="sponsor in about.sponsors"
           :key="sponsor.sponsorImageURL"
         >
           <img
@@ -124,7 +124,7 @@
       >
         <div
           class="logo-wrap-ticker"
-          v-for="sponsor in sponsors"
+          v-for="sponsor in about.sponsors"
           :key="sponsor.sponsorImageURL"
         >
           <img
@@ -145,7 +145,7 @@
         "
       >
         <div
-          v-for="sponsor in sponsors"
+          v-for="sponsor in about.sponsors"
           :key="sponsor.sponsorImageURL"
           class="logo-wrap-ticker"
         >
@@ -163,24 +163,8 @@
 
 <script setup>
 const props = defineProps({
-  companyFullName: {
-    type: String,
-    required: true,
-  },
-  companySlogan: {
-    type: String,
-    required: true,
-  },
-  companySummary: {
-    type: String,
-    required: true,
-  },
-  statistics: {
-    type: Array,
-    required: true,
-  },
-  sponsors: {
-    type: Array,
+  about: {
+    type: Object,
     required: true,
   },
 });

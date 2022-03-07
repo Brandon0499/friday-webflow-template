@@ -7,10 +7,10 @@
           class="center-wrapper inner-padding-medium"
         >
           <h2 class="heading-large margin-bottom-xsmall">
-            {{ memberTextAs }}
+            {{ companyInfo.memberTextAs }}
           </h2>
           <p class="medium-paragraph">
-            {{ membersIntro }}
+            {{ companyInfo.membersIntro }}
           </p>
         </div>
       </div>
@@ -21,7 +21,7 @@
           id="w-node-_6e7598f0-4ae8-b765-38bc-ef4f35557c20-0e305478"
           role="listitem"
           class="collection-item w-dyn-item"
-          v-for="member in members"
+          v-for="member in companyInfo.members"
           :key="member.memberName"
         >
           <a
@@ -351,14 +351,9 @@
 
 <script setup>
 const props = defineProps({
-  memberTextAs: {
-    type: String,
-  },
-  membersIntro: {
-    type: String,
-  },
-  members: {
-    type: Array,
+  companyInfo: {
+    type: Object,
+    required: true,
   },
 });
 </script>

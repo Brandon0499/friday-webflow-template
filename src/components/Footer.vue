@@ -6,15 +6,20 @@
           id="w-node-_2bca43ef-7cde-b5da-b1b2-716107bf8e46-07bf8e43"
           class="content-wrapper"
         >
-          <img :src="companyLogo" loading="lazy" alt="" class="logo-footer" />
+          <img
+            :src="footer.companyLogo"
+            loading="lazy"
+            alt=""
+            class="logo-footer"
+          />
           <p class="main-paragraph">
-            {{ companyDescription }}
+            {{ footer.companyDescription }}
           </p>
         </div>
         <ul
           role="list"
           class="w-list-unstyled"
-          v-for="list in footerLists"
+          v-for="list in footer.footerLists"
           :key="list"
         >
           <li>
@@ -37,7 +42,7 @@
           <a
             :href="socialMediaLink.link"
             class="link-icons center w-inline-block"
-            v-for="socialMediaLink in socialMediaLinks"
+            v-for="socialMediaLink in footer.socialMediaLinks"
             :key="socialMediaLink.image"
             ><img
               :src="socialMediaLink.image"
@@ -51,9 +56,9 @@
           class="footer-inner"
         >
           <div class="main-paragraph size-small">
-            © {{ companyName }} — Powered by
-            <a :href="creatorCompanyWebsite" target="_blank">{{
-              creatorCompany
+            © {{ footer.companyName }} — Powered by
+            <a :href="footer.creatorCompanyWebsite" target="_blank">{{
+              footer.creatorCompany
             }}</a>
           </div>
         </div>
@@ -63,7 +68,9 @@
         >
           <div class="main-paragraph size-small">
             Created by
-            <a :href="creatorLink" target="_blank">{{ creatorName }}</a>
+            <a :href="footer.creatorLink" target="_blank">{{
+              footer.creatorName
+            }}</a>
           </div>
         </div>
       </div>
@@ -73,36 +80,40 @@
 
 <script setup>
 const props = defineProps({
-  companyLogo: {
-    type: String,
+  footer: {
+    type: Object,
     required: true,
   },
-  companyDescription: {
-    type: String,
-    required: true,
-  },
-  footerLists: {
-    type: Array,
-    required: true,
-  },
-  socialMediaLinks: {
-    type: Array,
-  },
-  companyName: {
-    type: String,
-  },
-  creatorCompany: {
-    type: String,
-  },
-  creatorCompanyWebsite: {
-    type: String,
-  },
-  creatorName: {
-    type: String,
-  },
-  creatorLink: {
-    type: String,
-  },
+  //   companyLogo: {
+  //     type: String,
+  //     required: true,
+  //   },
+  //   companyDescription: {
+  //     type: String,
+  //     required: true,
+  //   },
+  //   footerLists: {
+  //     type: Array,
+  //     required: true,
+  //   },
+  //   socialMediaLinks: {
+  //     type: Array,
+  //   },
+  //   companyName: {
+  //     type: String,
+  //   },
+  //   creatorCompany: {
+  //     type: String,
+  //   },
+  //   creatorCompanyWebsite: {
+  //     type: String,
+  //   },
+  //   creatorName: {
+  //     type: String,
+  //   },
+  //   creatorLink: {
+  //     type: String,
+  //   },
 });
 
 // console.log(props.footerLists);
