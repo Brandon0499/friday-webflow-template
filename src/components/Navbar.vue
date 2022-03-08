@@ -16,7 +16,7 @@
           <a
             :href="navbarData.companyMainPageLink"
             id="w-node-_703e939d-fb81-d5e3-3360-68b6ba39a388-ba39a384"
-            class="brand w-nav-brand"
+            class="brand w-nav-brand logoZ smallHidden"
             aria-label="home"
             ><img
               :src="navbarData.companyLogoURL"
@@ -27,7 +27,7 @@
           <nav
             role="navigation"
             id="w-node-_703e939d-fb81-d5e3-3360-68b6ba39a38a-ba39a384"
-            class="nav-menu w-nav-menu mobileMenu"
+            class="nav-menu w-nav-menu"
           >
             <div class="inner-nav-wrapper">
               <div class="main-navbar">
@@ -281,102 +281,106 @@
               </div>
             </div>
           </nav>
-          <div
-            id="w-node-_703e939d-fb81-d5e3-3360-68b6ba39a3e4-ba39a384"
-            class="menu-button w-nav-button"
-            style="-webkit-user-select: text"
-            aria-label="menu"
-            role="button"
-            tabindex="0"
-            aria-controls="w-nav-overlay-0"
-            aria-haspopup="menu"
-            aria-expanded="false"
-          >
-            <div class="menu-mobile mobileMenu">
+          <!-- original burger menu -->
+
+          <!-- hide this div if user did not click the menu button -->
+          <div class="mobileMenuOverlay" :class="{ blackBg: menuOpen }">
+            <div class="mobileMenuWrapper">
+              <a
+                :href="navbarData.companyMainPageLink"
+                id="w-node-_703e939d-fb81-d5e3-3360-68b6ba39a388-ba39a384"
+                class="brand w-nav-brand"
+                aria-label="home"
+                ><img
+                  :src="navbarData.companyLogoURL"
+                  loading="lazy"
+                  alt=""
+                  class="image-brand"
+              /></a>
               <div
-                data-w-id="703e939d-fb81-d5e3-3360-68b6ba39a3e6"
-                data-animation-type="lottie"
-                data-src="https://assets.website-files.com/61e5bb75ba3a7e40020bd3b2/6205830c25307d2eb2a48ebd_button2.json"
-                data-loop="0"
-                data-direction="1"
-                data-autoplay="0"
-                data-is-ix2-target="1"
-                data-renderer="svg"
-                data-default-duration="3"
-                data-duration="0"
-                data-ix2-initial-state="91"
-                class="lottie-menu"
+                class="menuBtn"
+                @click="toggleMenu"
+                :class="{ open: menuOpen }"
+                style="z-index: 8"
               >
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 23 22"
-                  width="23"
-                  height="22"
-                  preserveAspectRatio="xMidYMid meet"
-                  style="
-                    width: 100%;
-                    height: 100%;
-                    transform: translate3d(0px, 0px, 0px);
-                  "
-                >
-                  <defs>
-                    <clippath id="__lottie_element_44">
-                      <rect width="23" height="22" x="0" y="0"></rect>
-                    </clippath>
-                    <clippath id="__lottie_element_46">
-                      <path d="M0,0 L13,0 L13,6 L0,6z"></path>
-                    </clippath>
-                  </defs>
-                  <g clip-path="url(#__lottie_element_44)">
-                    <g
-                      clip-path="url(#__lottie_element_46)"
-                      transform="matrix(1.093000054359436,0,0,1.093000054359436,3.3954997062683105,7.720999717712402)"
-                      opacity="1"
-                      style="display: block"
-                    >
-                      <g
-                        transform="matrix(1,0,0,1,8,5.5)"
-                        opacity="1"
-                        style="display: block"
-                      >
-                        <g opacity="1" transform="matrix(0,-1,1,0,0,0)">
-                          <path
-                            fill="rgb(255,255,255)"
-                            fill-opacity="1"
-                            d=" M0.5,4.813000202178955 C0.5,4.813000202178955 0.5,4.5 0.5,4.5 C0.5,4.776000022888184 0.2759999930858612,5 0,5 C-0.2759999930858612,5 -0.5,4.776000022888184 -0.5,4.5 C-0.5,4.5 -0.5,4.813000202178955 -0.5,4.813000202178955 C-0.5,4.5370001792907715 -0.2759999930858612,4.313000202178955 0,4.313000202178955 C0.2759999930858612,4.313000202178955 0.5,4.5370001792907715 0.5,4.813000202178955z"
-                          ></path>
-                        </g>
-                      </g>
-                    </g>
-                    <g
-                      transform="matrix(1,0,0,1,12,13.625)"
-                      opacity="1"
-                      style="display: block"
-                    >
-                      <g opacity="1" transform="matrix(0,-1,1,0,0,0)">
-                        <path
-                          fill="rgb(255,255,255)"
-                          fill-opacity="1"
-                          d=" M0.5,-4.5 C0.5,-4.5 0.5,4.5 0.5,4.5 C0.5,4.776000022888184 0.2759999930858612,5 0,5 C-0.2759999930858612,5 -0.5,4.776000022888184 -0.5,4.5 C-0.5,4.5 -0.5,-4.5 -0.5,-4.5 C-0.5,-4.776000022888184 -0.2759999930858612,-5 0,-5 C0.2759999930858612,-5 0.5,-4.776000022888184 0.5,-4.5z"
-                        ></path>
-                      </g>
-                    </g>
-                    <g
-                      transform="matrix(1,0,0,1,10.5,8.625)"
-                      opacity="1"
-                      style="display: block"
-                    >
-                      <g opacity="1" transform="matrix(0,-1,1,0,0,0)">
-                        <path
-                          fill="rgb(255,255,255)"
-                          fill-opacity="1"
-                          d=" M0.5,-6 C0.5,-6 0.5,6 0.5,6 C0.5,6.276000022888184 0.2759999930858612,6.5 0,6.5 C-0.2759999930858612,6.5 -0.5,6.276000022888184 -0.5,6 C-0.5,6 -0.5,-6 -0.5,-6 C-0.5,-6.276000022888184 -0.2759999930858612,-6.5 0,-6.5 C0.2759999930858612,-6.5 0.5,-6.276000022888184 0.5,-6z"
-                        ></path>
-                      </g>
-                    </g>
-                  </g>
-                </svg>
+                <div class="menuBtnLines"></div>
               </div>
+            </div>
+            <!-- only show the dropdowns when the mobile menu is clicked -->
+            <div class="mobileNavWrapper" :class="{ showNone: !menuOpen }">
+              <div class="homeNav">
+                <a :href="navbarData.companyMainPageLink" class="homeLink">
+                  Home
+                </a>
+              </div>
+
+              <div
+                class="individualNav"
+                v-for="navTitle in navbarData.navTitles"
+                :key="navTitle.navName"
+                @click="toggleSubTitle(navTitle)"
+                @mouseover="navTitle.subTitleOpen = true"
+                @mouseleave="navTitle.subTitleOpen = false"
+              >
+                <div
+                  href="https://friday-template.webflow.io/"
+                  class="navLinks"
+                >
+                  {{ navTitle.navName }}
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="h-5 w-5 chevronDown"
+                    viewBox="0 0 20 20"
+                    fill="currentColor"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                      clip-rule="evenodd"
+                    />
+                  </svg>
+                </div>
+
+                <div
+                  class="subNavWrapper"
+                  :class="{ showSubTitle: navTitle.subTitleOpen }"
+                >
+                  <a
+                    :href="navbarSubTitle.navSubPageLink"
+                    v-for="navbarSubTitle in navTitle.navSubTitles"
+                    :key="navbarSubTitle.navSubName"
+                    >{{ navbarSubTitle.navSubName }}</a
+                  >
+                </div>
+              </div>
+            </div>
+
+            <!-- mobile buttons section -->
+            <!-- bind the mobileButtonOverlay class only if the menuOpen is true-->
+            <div class="mobileBtn">
+              <a
+                id="w-node-_703e939d-fb81-d5e3-3360-68b6ba39a3da-ba39a384"
+                :href="navbarData.button1Link"
+                class="topnav-button outline w-inline-block button1"
+                :class="{ mobileButtonOverlay: !menuOpen }"
+                ><div>{{ navbarData.button1Text }}</div></a
+              >
+              <a
+                id="w-node-_703e939d-fb81-d5e3-3360-68b6ba39a3de-ba39a384"
+                :href="navbarData.button2Link"
+                target="_blank"
+                class="button small w-inline-block button2"
+                :class="{ mobileButtonOverlay: !menuOpen }"
+                ><div class="circular-arrow" style="">
+                  <img
+                    src="/assets/61e5bb75ba3a7ec9880bd403_cta-arrow-white.svg"
+                    loading="lazy"
+                    alt=""
+                    class="icon-arrow"
+                  />
+                </div>
+                <div>{{ navbarData.button2Text }}</div></a
+              >
             </div>
           </div>
         </div>
@@ -397,18 +401,232 @@ const props = defineProps({
   },
 });
 
+let menuOpen = ref(false);
+function toggleMenu() {
+  menuOpen.value = !menuOpen.value;
+}
+
 function toggleDropdown(navTitle) {
   navTitle.showDropdown = !navTitle.showDropdown;
+}
+
+function toggleSubTitle(navTitle) {
+  navTitle.subTitleOpen = !navTitle.subTitleOpen;
+  console.log(navTitle, navTitle.subTitleOpen);
 }
 </script>
 
 <style>
+.subNavWrapper {
+  display: none;
+  flex-direction: column;
+  padding: 0 2px;
+  border-radius: 12px;
+  background-color: #fafafc;
+  margin-top: 10px;
+}
+
+.showSubTitle {
+  display: flex;
+}
+
+.subNavWrapper a {
+  text-decoration: none;
+  color: #595959;
+  background: #fff;
+  margin: 10px 20px;
+  background-color: #fafafc;
+}
+
+.subNavWrapper a:hover {
+  text-decoration: none;
+  color: #596594;
+}
+
+.chevronDown {
+  display: block;
+  width: 20px;
+  color: darkgrey;
+}
+
+.showNone {
+  display: none;
+}
+
+.mobileNavWrapper {
+  margin-top: 40px;
+}
+
+.homeNav {
+  width: 100%;
+  padding: 10px 20px;
+}
+.individualNav {
+  width: 100%;
+  padding: 10px 20px;
+}
+
+.homeLink {
+  display: block;
+  color: #fff;
+  text-decoration: none;
+  font-size: 32px;
+  width: 100%;
+}
+.homeLink:hover {
+  color: rgb(193, 190, 190);
+}
+
+.navLinks {
+  display: flex;
+  color: #fff;
+  text-decoration: none;
+  font-size: 32px;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+}
+.navLinks:hover {
+  color: rgb(193, 190, 190);
+}
+
+.mobileMenuWrapper {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.blackBg {
+  background-color: black;
+}
+
 .dropdownList {
   display: block;
 }
 
-.mobileMenu {
-  display: block;
-  z-index: 100;
+.logoZ {
+  z-index: 2;
+}
+
+.mobileMenuOverlay {
+  display: flex;
+  flex-direction: column;
+  visibility: hidden;
+  z-index: 5;
+  opacity: 100%;
+  color: white;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  padding: 20px 30px;
+  min-height: 100vh;
+}
+
+.mobileButtonOverlay {
+  visibility: hidden;
+}
+
+.menuBtn {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 40px;
+  cursor: pointer;
+  transition: all 0.5s ease-in-out;
+}
+
+.menuBtnLines {
+  width: 40px;
+  background: #fff;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(255, 101, 47, 0.2);
+  transition: all 0.5s ease-in-out;
+}
+
+.menuBtnLines::before,
+.menuBtnLines::after {
+  content: "";
+  position: absolute;
+  width: 30px;
+  height: 3px;
+  background: #fff;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(255, 101, 47, 0.2);
+  transition: all 0.5s ease-in-out;
+}
+
+.menuBtnLines::before {
+  transform: translateY(-5px) translateX(5px);
+}
+
+.menuBtnLines::after {
+  width: 25px;
+  transform: translateY(5px) translateX(10px);
+}
+
+.open {
+  border-radius: 50%;
+  background-color: #4e43ca;
+}
+
+.open .menuBtnLines::before {
+  transform: rotate(45deg) translateY(-5px) translateX(3px);
+  width: 30px;
+}
+
+.open .menuBtnLines::after {
+  transform: rotate(135deg) translateY(-3px) translateX(-5px);
+  width: 30px;
+}
+
+@media screen and (max-width: 991px) {
+  .mobileBtn {
+    padding: 40px 20px;
+    display: flex;
+    align-items: center;
+  }
+
+  .button1 {
+    width: auto;
+    height: 56px;
+    margin: 10px;
+  }
+  .button2 {
+    width: 190px;
+    height: 68px;
+    margin: 10px;
+  }
+
+  .mobileMenuOverlay {
+    visibility: visible;
+    /* opacity: 100%; */
+  }
+
+  .smallHidden {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .mobileBtn {
+    padding: 40px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .button1 {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 479px) {
+  .button2 {
+    width: 100%;
+  }
 }
 </style>

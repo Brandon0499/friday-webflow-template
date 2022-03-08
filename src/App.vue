@@ -47,6 +47,7 @@ const navbarData = ref({
     {
       navName: "Landings",
       showDropdown: false,
+      subTitleOpen: false,
       navSubTitles: [
         {
           navSubName: "Landing 01",
@@ -73,6 +74,7 @@ const navbarData = ref({
     {
       navName: "Features",
       isClicked: false,
+      subTitleOpen: false,
       navSubTitles: [
         {
           navSubName: "Features 01",
@@ -95,6 +97,7 @@ const navbarData = ref({
     {
       navName: "CMS",
       isClicked: false,
+      subTitleOpen: false,
       navSubTitles: [
         {
           navSubName: "CMS 01",
@@ -113,6 +116,7 @@ const navbarData = ref({
     {
       navName: "Template",
       isClicked: false,
+      subTitleOpen: false,
       navSubTitles: [
         {
           navSubName: "Template 01",
