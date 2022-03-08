@@ -14,8 +14,12 @@
     </div>
   </div>
   <div class="full-page">
-    <Navbar></Navbar>
-    <MainTitleSection></MainTitleSection>
+    <Navbar :navbarData="navbarData"></Navbar>
+    <MainTitleSection :mainTitle="mainTitle">
+      <template #test>
+        <Promotions :mainTitle="mainTitle"></Promotions>
+      </template>
+    </MainTitleSection>
     <AboutSection :about="about"></AboutSection>
     <MarketingSection :marketing="marketing"></MarketingSection>
     <CompanyInfoSection :companyInfo="companyInfo"></CompanyInfoSection>
@@ -32,7 +36,120 @@ import MarketingSection from "./components/MarketingSection.vue";
 import CompanyInfoSection from "./components/CompanyInfoSection.vue";
 import ParticipateSection from "./components/ParticipateSection.vue";
 import Footer from "./components/Footer.vue";
+import Promotions from "./components/MainTitleComponents/Promotions.vue";
 import { ref } from "@vue/reactivity";
+
+// navbar data
+const navbarData = ref({
+  companyLogoURL: "/assets/61f31498ab68631620f198f9_Friday-white.svg",
+  companyMainPageLink: "https://friday-template.webflow.io/",
+  navTitles: [
+    {
+      navName: "Landings",
+      showDropdown: false,
+      navSubTitles: [
+        {
+          navSubName: "Landing 01",
+          navSubPageLink: "https://friday-template.webflow.io/",
+        },
+        {
+          navSubName: "Landing 02",
+          navSubPageLink: "https://friday-template.webflow.io/",
+        },
+        {
+          navSubName: "Landing 03",
+          navSubPageLink: "https://friday-template.webflow.io/",
+        },
+        {
+          navSubName: "Landing 04",
+          navSubPageLink: "https://friday-template.webflow.io/",
+        },
+        {
+          navSubName: "Landing 05",
+          navSubPageLink: "https://friday-template.webflow.io/",
+        },
+      ],
+    },
+    {
+      navName: "Features",
+      isClicked: false,
+      navSubTitles: [
+        {
+          navSubName: "Features 01",
+          navSubPageLink: "https://friday-template.webflow.io/",
+        },
+        {
+          navSubName: "Features 02",
+          navSubPageLink: "https://friday-template.webflow.io/",
+        },
+        {
+          navSubName: "Features 03",
+          navSubPageLink: "https://friday-template.webflow.io/",
+        },
+        {
+          navSubName: "Features 04",
+          navSubPageLink: "https://friday-template.webflow.io/",
+        },
+      ],
+    },
+    {
+      navName: "CMS",
+      isClicked: false,
+      navSubTitles: [
+        {
+          navSubName: "CMS 01",
+          navSubPageLink: "https://friday-template.webflow.io/",
+        },
+        {
+          navSubName: "CMS 02",
+          navSubPageLink: "https://friday-template.webflow.io/",
+        },
+        {
+          navSubName: "CMS 03",
+          navSubPageLink: "https://friday-template.webflow.io/",
+        },
+      ],
+    },
+    {
+      navName: "Template",
+      isClicked: false,
+      navSubTitles: [
+        {
+          navSubName: "Template 01",
+          navSubPageLink: "https://friday-template.webflow.io/",
+        },
+        {
+          navSubName: "Template 02",
+          navSubPageLink: "https://friday-template.webflow.io/",
+        },
+        {
+          navSubName: "Template 03",
+          navSubPageLink: "https://friday-template.webflow.io/",
+        },
+        {
+          navSubName: "Template 04",
+          navSubPageLink: "https://friday-template.webflow.io/",
+        },
+      ],
+    },
+  ],
+  button1Text: "Sign Up",
+  button1Link: "https://friday-template.webflow.io/other-pages/form-03",
+  button2Text: "Sign In",
+  button2Link:
+    "https://webflow.com/templates/html/friday-conference-website-template",
+});
+
+// MainTitleSection data
+const mainTitle = ref({
+  companyFirstName: "Apple",
+  eventActivity: "Marathon",
+  emojiURL:
+    "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e6/Noto_Emoji_KitKat_263a.svg/1200px-Noto_Emoji_KitKat_263a.svg.png",
+  joinButtonText: "Join Here",
+  learnMoreText: "Click here to learn more",
+  promotionText: "Promotion",
+});
 
 // About data
 const about = ref({
