@@ -434,13 +434,15 @@ function toggleSubTitle(navTitle) {
   text-decoration: none;
   color: #595959;
   background: #fff;
-  margin: 10px 20px;
+  padding: 10px 20px;
   background-color: #fafafc;
+  border-radius: 12px;
 }
 
 .subNavWrapper a:hover {
   text-decoration: none;
   color: #596594;
+  background-color: rgb(238, 236, 236);
 }
 
 .chevronDown {
@@ -537,6 +539,7 @@ function toggleSubTitle(navTitle) {
   height: 40px;
   cursor: pointer;
   transition: all 0.5s ease-in-out;
+  border-radius: 50%;
 }
 
 .menuBtnLines {

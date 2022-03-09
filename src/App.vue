@@ -73,7 +73,7 @@ const navbarData = ref({
     },
     {
       navName: "Features",
-      isClicked: false,
+      showDropdown: false,
       subTitleOpen: false,
       navSubTitles: [
         {
@@ -96,7 +96,7 @@ const navbarData = ref({
     },
     {
       navName: "CMS",
-      isClicked: false,
+      showDropdown: false,
       subTitleOpen: false,
       navSubTitles: [
         {
@@ -115,7 +115,7 @@ const navbarData = ref({
     },
     {
       navName: "Template",
-      isClicked: false,
+      showDropdown: false,
       subTitleOpen: false,
       navSubTitles: [
         {

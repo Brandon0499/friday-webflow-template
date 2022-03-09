@@ -13,7 +13,11 @@
       </div>
       <div id="w-node-_54adcaaa-0454-a003-4d72-1777ed4c39d0-0e305478">
         <div class="faq-wrapper divider">
-          <a href="#" class="faq-link w-inline-block">
+          <a
+            href="#hello"
+            class="faq-link w-inline-block"
+            @click="toggleHiddenDetails(singleAgenda)"
+          >
             <div>
               <div class="timeline-wrapper">
                 <div
@@ -28,7 +32,13 @@
                 {{ singleAgenda.agendaTitle }}
               </div>
             </div>
-            <div class="faq-icon">
+            <div
+              class="faq-icon"
+              :class="{
+                rotate: singleAgenda.showHiddenDetails,
+                rotateOpposite: !singleAgenda.showHiddenDetails,
+              }"
+            >
               <img
                 loading="lazy"
                 src="/assets/61e5bb75ba3a7e42260bd3f0_icon-plus.svg"
@@ -37,7 +47,13 @@
               />
             </div>
           </a>
-          <div class="faq-container" style="display: none">
+          <div
+            class="faq-container"
+            :class="{
+              showHiddenDetails: singleAgenda.showHiddenDetails,
+              hideHiddenDetails: !singleAgenda.showHiddenDetails,
+            }"
+          >
             <p class="medium-paragraph">
               {{ singleAgenda.agendaSummary }}
             </p>
@@ -85,6 +101,30 @@ const props = defineProps({
     required: true,
   },
 });
+
+function toggleHiddenDetails(agenda) {
+  agenda.showHiddenDetails = !agenda.showHiddenDetails;
+}
 </script>
 
-<style></style>
+<style scoped>
+.showHiddenDetails {
+  display: block;
+}
+
+.hideHiddenDetails {
+  display: none;
+}
+
+.rotate {
+  transform: rotate(45deg);
+  transition-duration: 0.3s;
+  transition-timing-function: ease-in-out;
+}
+
+.rotateOpposite {
+  transform: rotate(0deg);
+  transition-duration: 0.3s;
+  transition-timing-function: ease-in-out;
+}
+</style>

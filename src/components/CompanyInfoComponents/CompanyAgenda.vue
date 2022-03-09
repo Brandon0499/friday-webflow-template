@@ -31,6 +31,7 @@ const agendas = ref({
       agendaTitle: "Build an employer brand that attracts top performers",
       agendaSummary:
         "Nulla vitae elit libero, a pharetra augue. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Sed posuere consectetur est at lobortis. Aenean lacinia bibendum nulla sed consectetur.Test1",
+      showHiddenDetails: false,
       peopleInCharge: [
         {
           imageURL:
@@ -58,7 +59,8 @@ const agendas = ref({
       agendaSchedules: ["9:00 AM", "9.30 AM"],
       agendaTitle: "Build an employer brand that attracts top performers",
       agendaSummary:
-        "Nulla vitae elit libero, a pharetra augue. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Sed posuere consectetur est at lobortis. Aenean lacinia bibendum nulla sed consectetur.Test1",
+        "Nulla vitae elit libero, a pharetra augue. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Sed posuere consectetur est at lobortis. Aenean lacinia bibendum nulla sed consectetur.Test2",
+      showHiddenDetails: false,
       peopleInCharge: [
         {
           imageURL:
